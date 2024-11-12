@@ -15,11 +15,14 @@ Feature Importance Analysis: Identify and interpret the most impactful features 
 
 
 Project Workflow
+
 1. Data Preprocessing
+
 Data Cleaning: Checked for missing values, removed unnecessary columns (id, name, release_date, etc.), and one-hot encoded categorical fields (year, explicit, key, and mode).
 Scaling: Standardized numerical features to prepare for model training.
 
 2. Regression Models
+
 The project implements several regression techniques to predict song popularity:
 
 Linear Regression: Provided a baseline model with an R-squared of 0.79.
@@ -35,12 +38,14 @@ XGBoost: Achieved the highest R-squared of 0.80, indicating strong performance o
 After training each model, the performance was evaluated using Mean Squared Error (MSE) and R-squared scores. XGBoost emerged as the best performer, indicating some non-linear relationships among features, though linear models like Linear Regression and Ridge showed close accuracy.
 
 4. Feature Importance
+   
 Feature importances were extracted from each model to understand which attributes most influence song popularity. Key findings include:
 
 Top Features: year, acousticness, loudness, speechiness
 Visualization: The top 10 features from the XGBoost model were visualized to illustrate their influence on popularity.
 
 Visualizations
+
 Feature Distribution: Histogram of song release years to explore historical trends.
 Heatmap: Correlation heatmap to display relationships among features.
 Scatter Plots: Detailed views of important features like year and acousticness against popularity.
